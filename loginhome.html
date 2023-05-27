@@ -37,8 +37,7 @@
             </div>
         </div>
         <div>
-            <a href="login.html">Login</a>
-            <a href="signup.html">Sign Up</a>
+            <!-- <a href="login.html">Login</a> -->
         </div>
     </div>
   </header>
@@ -120,7 +119,7 @@
 
 <div>
     <button id="button1">Student Login</button>
-    <button id="button2" onclick = "handleButtonClick(2)">Faculty Login</button>
+    <button id="button2" onclick="handleButtonClick(2)">Faculty Login</button>
 </div>
   
 
@@ -128,14 +127,14 @@
     // Function to handle the button click event
     function handleButtonClick(loginType) {
       // Get the username from the user (you can modify this as per your requirements)
-      var username = prompt("Enter your username:");
+      // var username = prompt("Enter your username:");
 
       if (username) {
         // Redirect the user to the appropriate home page based on login type
         if (loginType === 1) {
-          window.location.href = "https://suchitg04.github.io/CodeClash-23_TeamSaggiN/login";
+          window.location.href = "https://suchitg04.github.io/CodeClash-23_TeamSaggiN/login.html";
         } else if (loginType === 2) {
-          window.location.href = "login.html";
+          window.location.href = "facultylogin.html";
         }
       }
     }
