@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-Curricular Activities</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cdbbdb;
+      margin: 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: blueviolet;
+      padding: 10px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 3px solid black;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .activities {
+      margin: 20px;
+    }
+    .activities h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .activities p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    li {
+      border: 3px solid black;
+      margin: 20px 0;
+      background-color: white;
+    }
+
+    h3,p{
+      padding: 0 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <div>
+      <a href="index.html">Home</a>
+      <div class = "dropdown">
+        <a>Complaints Portal</a>
+        <div class = "dropdown-content">
+          <a href="complaints.html">Complaints</a>
+          <a href="petitions.html">Petitions</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a>Resources</a>
+        <div class="dropdown-content">
+          <a href = "marks.html">Results</a>
+          <a href = "attendance.html">Attendance</a>
+          <a href = "information.html">Information</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a>News</a>
+        <div class="dropdown-content">
+          <a href="announcements.html">Announcement</a>
+          <a href="cca.html">CCA</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+  <div class="activities">
+    <h2>Co-Curricular Activities</h2>
+    <ul>
+      <li>
+        <h3>Debate Club</h3>
+        <p>The Debate Club provides a platform for students to develop their public speaking and critical thinking skills through engaging in debates on various topics.</p>
+      </li>
+      <li>
+        <h3>Robotics Club</h3>
+        <p>The Robotics Club offers students the opportunity to learn about robotics and participate in competitions, fostering teamwork and problem-solving skills.</p>
+      </li>
+      <li>
+        <h3>Art Club</h3>
+        <p>The Art Club encourages students to explore their creativity through various art forms, such as painting, drawing, and sculpture.</p>
+      </li>
+      <li>
+        <h3>Drama Club</h3>
+        <p>The Drama Club allows students to express themselves through acting, directing, and stage production, while also building confidence and communication skills.</p>
+      </li>
+      <li>
+        <h3>Music Club</h3>
+        <p>The Music Club provides a space for students to learn and practice various musical instruments, as well as participate in performances and concerts.</p>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

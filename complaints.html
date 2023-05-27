@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=nav, initial-scale=1.0">
+    <title>complaint</title>
+    <style>
+      * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial;
+      /* font-size: 20px; */
+      font-weight: 700;
+      }
+      .main {
+      display: flex;
+      flex-direction: column;
+      background-color: #cdbbdb;
+      width: 100%;
+      height: 200vh;
+      }
+      .complaint {
+      width: 80%;
+      height: 200vh;
+      background-color: #cdbbdb;
+      justify-content:space-evenly;
+      margin: 30px 10%;
+      }
+      .complaints {
+      height: 30vh;
+      border: 3px solid #333;
+      background-color: white;
+      margin: 10vh 5px 0 5px;
+      }
+      h1 {
+      text-align: center;
+      margin: 10px 0 20px 0;
+      color: #333;
+      font-weight: bolder;
+      border-bottom: 3px dotted #333;
+      padding: 10px 0 10px 0;
+      }
+      p {
+      text-align: left;
+      color: black;
+      margin: 15px;
+      }
+      .navbar {
+      display: flex;
+      justify-content: space-between;
+      background-color: blueviolet;
+      padding: 10px;
+      }
+      .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: 3px solid black;
+      }
+      .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+      }
+      .dropdown {
+      position: relative;
+      display: inline-block;
+      }
+      .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      }
+      .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      }
+      .dropdown-content a:hover {
+      background-color: #f1f1f1;
+      }
+      .dropdown:hover .dropdown-content {
+      display: block;
+      }
+      .announcements {
+      margin: 20px;
+      }
+      .announcements h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      }
+      .announcements p {
+      font-size: 16px;
+      line-height: 1.5;
+      }
+      .createcomplaint {
+      width: 20%;
+      height: 70px;
+      background-color: blueviolet;
+      margin: 40px 40%;
+      border-radius: 10px;
+      border: 3px solid black;
+      min-width: 200px;
+      color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="index.html">Home</a>
+        <div class = "dropdown">
+          <a>Complaints Portal</a>
+          <div class = "dropdown-content">
+            <a href="complaints.html">Complaints</a>
+            <a href="petitions.html">Petitions</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a>Resources</a>
+          <div class="dropdown-content">
+            <a href = "marks.html">Results</a>
+            <a href = "attendance.html">Attendance</a>
+            <a href = "information.html">Information</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a>News</a>
+          <div class="dropdown-content">
+            <a href="announcements.html">Announcement</a>
+            <a href="cca.html">CCA</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="complaint">
+        <div class="complaints">
+          <h1>complaint</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam suscipit deleniti quae doloremque perspiciatis accusantium asperiores, saepe possimus minima, laborum nulla quo sequi quia. Possimus consequuntur optio esse voluptas!</p>
+        </div>
+        <div class="complaints">
+          <h1>complaint</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur magnam suscipit deleniti quae doloremque perspiciatis accusantium asperiores, saepe possimus minima, laborum nulla quo sequi quia. Possimus consequuntur optio esse voluptas!</p>
+        </div>
+        <div class="complaints">
+          <h1>complaint</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam odio rem nobis doloremque dignissimos suscipit quibusdam a voluptate, voluptatibus, ad minima eaque architecto quisquam provident fugit autem dolorem, blanditiis quas.</p>
+        </div>
+        <div class="complaints">
+          <h1>complaint</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, maiores sapiente aliquid molestias omnis provident illum. Hic, at, aspernatur totam harum reprehenderit ipsa nisi, beatae culpa reiciendis nesciunt modi cum.</p>
+        </div>
+        <button class="createcomplaint">create compliant</button>
+      </div>
+    </div>
+  </body>
+</html>

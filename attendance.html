@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attendance</title>
+    <header>
+      <div class="navbar">
+        <div>
+          <a href="index.html">Home</a>
+          <div class = "dropdown">
+            <a>Complaints Portal</a>
+            <div class = "dropdown-content">
+              <a href="complaints.html">Complaints</a>
+              <a href="petitions.html">Petitions</a>
+            </div>
+          </div>
+          <div class = "dropdown">
+            <a>Resources</a>
+            <div class = "dropdown-content">
+              <a href = "marks.html">Results</a>
+              <a href = "attendance.html">Attendance</a>
+              <a href = "information.html">Information</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a>News</a>
+            <div class="dropdown-content">
+              <a href="announcements.html">Announcement</a>
+              <a href="cca.html">CCA</a>
+            </div>
+          </div>
+        </div>
+      <div>
+        <a href="login.html">Login</a>
+      </div>
+    </header>
+    <head>
+      <title>Student Attendance</title>
+      <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        header {
+        margin: 0;
+        }
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #cdbbdb;
+        }
+        h1 {
+        text-align: center;
+        margin: 50px;
+        }
+        .form-container {
+        max-width: 300px;
+        margin: 0 auto;
+        }
+        .form-group {
+        margin-bottom: 15px;
+        }
+        .form-group label {
+        display: block;
+        font-weight: bold;
+        }
+        .form-group input {
+        width: 100%;
+        padding: 5px;
+        font-size: 16px;
+        }
+        .btn-submit {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        background-color: white;
+        color: black;
+        border: 3px solid black;
+        cursor: pointer;
+        }
+        .result-container {
+        margin-top: 20px;
+        }
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: blueviolet;
+        padding: 10px;
+        margin: 0;
+        }
+        .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border: 3px solid black;
+        }
+        .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+        }
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+        .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        label {
+        margin: 20px 0;
+        }
+        input {
+        margin: 10px 0;
+        }
+        .full {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #cdbbdb;
+        }
+        .box {
+        height: 500px;
+        width: 600px;
+        background-color: blueviolet;
+        color: white;
+        }
+        li {
+        text-align: center;
+        margin: 7px;
+        }
+        h2 {
+        text-align: center;
+        margin: 20px;
+        }
+      </style>
+  </head>
+  <body>
+    <dic class="full">
+      <div class="box">
+        <h1>Student Attendance</h1>
+        <div class="form-container">
+          <div class="form-group">
+            <label for="usn">Enter USN:</label>
+            <input type="text" id="usn" placeholder="Eg: 1MS22CS000" />
+          </div>
+          <button class="btn-submit" onclick="viewAttendance()">View Attendance</button>
+        </div>
+        <div class="result-container" id="resultContainer"></div>
+      </div>
+    </dic>
+    <script>
+      function viewAttendance() {
+        var usn = document.getElementById("usn").value;
+      
+        // You would need to implement the logic here to retrieve and display the student's attendance based on the entered USN
+        // This could involve making an API call to a server-side script that fetches the attendance data from a database or some other data source
+        // For this example, let's assume you have an object called "attendanceData" containing the student attendance
+        var attendanceData = {
+          "1MS22CS000": {
+            math: 85,
+            physics: 90,
+            elective1: 70,
+            elective2: 80,
+            english: 95
+          },
+          "1MS22CS123": {
+            math: 90,
+            physics: 80,
+            elective1: 75,
+            elective2: 85,
+            english: 90
+          },
+          // Add more students' attendance data here
+        };
+      
+        var resultContainer = document.getElementById("resultContainer");
+      
+        if (attendanceData.hasOwnProperty(usn)) {
+          var attendance = attendanceData[usn];
+          var resultHTML = "<h2>Attendance for USN: " + usn + "</h2>";
+          resultHTML += "<ul>";
+          for (var subject in attendance) {
+            resultHTML += "<li>" + subject + ": " + attendance[subject] + "%</li>";
+          }
+          resultHTML += "</ul>";
+          resultContainer.innerHTML = resultHTML;
+        } else {
+          resultContainer.innerHTML = "<p>No attendance found for USN: " + usn + "</p>";
+        }
+      }
+    </script>
+  </body>
+</html>
